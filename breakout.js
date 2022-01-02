@@ -76,14 +76,14 @@ function create() {
    * As we move downward, the y value increases.
    */
   player = this.physics.add.sprite(
-    450, // x position
+    400, // x position
     570, // y position
     'paddle', // key of image for the sprite
   );
 
   // Let's add the ball
   ball = this.physics.add.sprite(
-    450, // x position
+    400, // x position
     540, // y position
     'ball' // key of image for the sprite
   );
