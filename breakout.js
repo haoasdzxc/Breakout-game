@@ -14,7 +14,7 @@ const config = {
   type: Phaser.AUTO,
   // Parent element to inject the Canvas/WebGL element with the game
   parent: 'game',
-  width: 900,
+  width: 800,
   heigth: 640,
   scale: {
     // Ensure the canvas is resized to fit the parent div's dimensions
