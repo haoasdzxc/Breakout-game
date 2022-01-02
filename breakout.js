@@ -61,6 +61,8 @@ function preload() {
   this.load.image('brick3', 'brick6.png');
   this.load.image('brick4', 'brick7.png');
   this.load.image('brick5', 'brick8.png');
+  this.load.image("bg", "background2.png");
+
 }
 
 /**
