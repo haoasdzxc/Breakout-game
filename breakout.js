@@ -14,7 +14,7 @@ const config = {
   type: Phaser.AUTO,
   // Parent element to inject the Canvas/WebGL element with the game
   parent: 'game',
-  width: 800,
+  width: 900,
   heigth: 640,
   scale: {
     // Ensure the canvas is resized to fit the parent div's dimensions
@@ -60,6 +60,7 @@ function preload() {
   this.load.image('brick2', 'brick5.png');
   this.load.image('brick3', 'brick6.png');
   this.load.image('brick4', 'brick7.png');
+  this.load.image('brick5', 'brick8.png');
 }
 
 /**
@@ -73,14 +74,14 @@ function create() {
    * As we move downward, the y value increases.
    */
   player = this.physics.add.sprite(
-    400, // x position
+    450, // x position
     570, // y position
     'paddle', // key of image for the sprite
   );
 
   // Let's add the ball
   ball = this.physics.add.sprite(
-    400, // x position
+    450, // x position
     540, // y position
     'ball' // key of image for the sprite
   );
@@ -131,6 +132,17 @@ function create() {
       stepX: 160
     }
   });
+  
+  redBricks2 = this.physics.add.group({
+    key: 'brick5',
+    repeat: 8,
+    immovable: true,
+    setXY: {
+      x: 80,
+      y: 180,
+      stepX: 80
+    }
+  });
 
   // Manage key presses
   cursors = this.input.keyboard.createCursorKeys();
@@ -155,6 +167,7 @@ function create() {
   this.physics.add.collider(ball, yellowBricks, hitBrick, null, this);
   this.physics.add.collider(ball, redBricks, hitBrick, null, this);
   this.physics.add.collider(ball, purpleBricks, hitBrick, null, this);
+  this.physics.add.collider(ball, redBricks2, hitBrick, null, this);
 
   // Make the player immovable
   player.setImmovable(true);
@@ -268,7 +281,7 @@ function isGameOver(world) {
  * @return {boolean}
  */
 function isWon() {
-  return violetBricks.countActive() + yellowBricks.countActive() + redBricks.countActive() == 0;
+  return violetBricks.countActive() + yellowBricks.countActive() + redBricks.countActive() + purpleBricks.countActive() + redBricks2.countActive() == 0;
 }
 
 /**
