@@ -88,47 +88,47 @@ function create() {
   // Add violet bricks
   violetBricks = this.physics.add.group({
     key: 'brick1',
-    repeat: 8,
+    repeat: 5,
     immovable: true,
     setXY: {
       x: 80,
       y: 100,
-      stepX: 80
+      stepX: 160
     }
   });
 
   // Add yellow bricks
   yellowBricks = this.physics.add.group({
     key: 'brick2',
-    repeat: 8,
+    repeat: 5,
     immovable: true,
     setXY: {
       x: 80,
       y: 60,
-      stepX: 80
+      stepX: 160
     }
   });
 
   // Add red bricks
   redBricks = this.physics.add.group({
     key: 'brick3',
-    repeat: 8,
+    repeat: 5,
     immovable: true,
     setXY: {
       x: 80,
       y: 20,
-      stepX: 80
+      stepX: 160
     }
   });
   
   Bricks = this.physics.add.group({
     key: 'brick4',
-    repeat: 8,
+    repeat: 5,
     immovable: true,
     setXY: {
       x: 80,
       y: 140,
-      stepX: 80
+      stepX: 160
     }
   });
 
