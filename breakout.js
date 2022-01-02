@@ -59,6 +59,7 @@ function preload() {
   this.load.image('brick1', 'brick4.png');
   this.load.image('brick2', 'brick5.png');
   this.load.image('brick3', 'brick6.png');
+  this.load.image('brick4', 'brick7.png');
 }
 
 /**
@@ -119,6 +120,17 @@ function create() {
       stepX: 80
     }
   });
+  
+  Bricks = this.physics.add.group({
+    key: 'brick4',
+    repeat: 8,
+    immovable: true,
+    setXY: {
+      x: 80,
+      y: 140,
+      stepX: 80
+    }
+  });
 
   // Manage key presses
   cursors = this.input.keyboard.createCursorKeys();
@@ -142,6 +154,7 @@ function create() {
   this.physics.add.collider(ball, violetBricks, hitBrick, null, this);
   this.physics.add.collider(ball, yellowBricks, hitBrick, null, this);
   this.physics.add.collider(ball, redBricks, hitBrick, null, this);
+  this.physics.add.collider(ball, Bricks, hitBrick, null, this);
 
   // Make the player immovable
   player.setImmovable(true);
