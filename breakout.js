@@ -100,10 +100,10 @@ function create() {
   // Add yellow bricks
   yellowBricks = this.physics.add.group({
     key: 'brick2',
-    repeat: 5,
+    repeat: 4,
     immovable: true,
     setXY: {
-      x: 80,
+      x: 160,
       y: 60,
       stepX: 160
     }
@@ -123,10 +123,10 @@ function create() {
   
   purpleBricks = this.physics.add.group({
     key: 'brick4',
-    repeat: 5,
+    repeat: 4,
     immovable: true,
     setXY: {
-      x: 80,
+      x: 160,
       y: 140,
       stepX: 160
     }
