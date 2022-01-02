@@ -56,9 +56,9 @@ const game = new Phaser.Game(config);
 function preload() {
   this.load.image('ball', 'ball.png');
   this.load.image('paddle', 'paddle.png');
-  this.load.image('brick1', 'brick1.png');
-  this.load.image('brick2', 'brick2.png');
-  this.load.image('brick3', 'brick3.png');
+  this.load.image('brick1', 'brick4.png');
+  this.load.image('brick2', 'brick5.png');
+  this.load.image('brick3', 'brick6.png');
 }
 
 /**
@@ -91,7 +91,7 @@ function create() {
     immovable: true,
     setXY: {
       x: 80,
-      y: 140,
+      y: 100,
       stepX: 80
     }
   });
@@ -103,7 +103,7 @@ function create() {
     immovable: true,
     setXY: {
       x: 80,
-      y: 90,
+      y: 60,
       stepX: 80
     }
   });
@@ -115,7 +115,7 @@ function create() {
     immovable: true,
     setXY: {
       x: 80,
-      y: 40,
+      y: 20,
       stepX: 80
     }
   });
@@ -152,7 +152,7 @@ function create() {
   openingText = this.add.text(
     this.physics.world.bounds.width / 2,
     this.physics.world.bounds.height / 2,
-    'Press SPACE to Start',
+    ' 按空白鍵開始遊戲 ',
     {
       fontFamily: 'Monaco, Courier, monospace',
       fontSize: '50px',
@@ -170,7 +170,7 @@ function create() {
   gameOverText = this.add.text(
     this.physics.world.bounds.width / 2,
     this.physics.world.bounds.height / 2,
-    'Game Over',
+    '遊戲結束',
     {
       fontFamily: 'Monaco, Courier, monospace',
       fontSize: '50px',
@@ -187,7 +187,7 @@ function create() {
   playerWonText = this.add.text(
     this.physics.world.bounds.width / 2,
     this.physics.world.bounds.height / 2,
-    'You won!',
+    '你贏了!',
     {
       fontFamily: 'Monaco, Courier, monospace',
       fontSize: '50px',
