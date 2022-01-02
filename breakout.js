@@ -121,7 +121,7 @@ function create() {
     }
   });
   
-  Bricks = this.physics.add.group({
+  purpleBricks = this.physics.add.group({
     key: 'brick4',
     repeat: 5,
     immovable: true,
@@ -154,7 +154,7 @@ function create() {
   this.physics.add.collider(ball, violetBricks, hitBrick, null, this);
   this.physics.add.collider(ball, yellowBricks, hitBrick, null, this);
   this.physics.add.collider(ball, redBricks, hitBrick, null, this);
-  this.physics.add.collider(ball, Bricks, hitBrick, null, this);
+  this.physics.add.collider(ball, purpleBricks, hitBrick, null, this);
 
   // Make the player immovable
   player.setImmovable(true);
