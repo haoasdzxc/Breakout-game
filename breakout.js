@@ -91,7 +91,7 @@ function create() {
   // Add violet bricks
   violetBricks = this.physics.add.group({
     key: 'brick1',
-    repeat: 5,
+    repeat: 4,
     immovable: true,
     setXY: {
       x: 80,
@@ -103,7 +103,7 @@ function create() {
   // Add yellow bricks
   yellowBricks = this.physics.add.group({
     key: 'brick2',
-    repeat: 4,
+    repeat: 3,
     immovable: true,
     setXY: {
       x: 160,
@@ -115,7 +115,7 @@ function create() {
   // Add red bricks
   redBricks = this.physics.add.group({
     key: 'brick3',
-    repeat: 5,
+    repeat: 4,
     immovable: true,
     setXY: {
       x: 80,
@@ -126,7 +126,7 @@ function create() {
   
   purpleBricks = this.physics.add.group({
     key: 'brick4',
-    repeat: 4,
+    repeat: 3,
     immovable: true,
     setXY: {
       x: 160,
