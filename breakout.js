@@ -42,7 +42,7 @@ function preload() {
   this.load.image('ball', 'ball.png');
   this.load.image('paddle', 'paddle.png');
   this.load.image('brick1', 'brick4.png');
-  this.load.image('brick2', 'brick5.png');
+  this.load.image('brick2', 'brick9.png');
   this.load.image('brick3', 'brick6.png');
   this.load.image('brick4', 'brick7.png');
   this.load.image('brick5', 'brick8.png');
